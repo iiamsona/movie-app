@@ -7,7 +7,7 @@ const MovieDescription = () => {
   const featured = data.Featured;
   return (
     <section
-      className="relative h-6/7 w-full flex flex-col justify-center items-start bg-cover bg-center bg-no-repeat"
+      className="relative h-6/7 w-full flex flex-col justify-center items-start bg-cover bg-center bg-no-repeat pl-36"
       style={{ backgroundImage: `url(${getImageURL(featured.CoverImage)})` }}
     >
       <div className="flex flex-col p-2 gap-3 w-4/10">

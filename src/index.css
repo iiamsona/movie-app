@@ -37,3 +37,16 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.sidebar_hover:hover{
+  background: #040404;
+  background: linear-gradient(
+    90deg, 
+    rgba(4, 4, 4, 1) 0%,      /* full black at start */
+    rgba(4, 4, 4, 0.99) 60%,   /* semi-transparent black */
+    rgba(4, 4, 4, 0.9) 80%,   /* lighter transparency */
+    rgba(4, 4, 4, 0.8) 90%,
+    rgba(4, 4, 4, 0) 100%     /* fully transparent at the end */
+  );
+  
+}

@@ -12,7 +12,7 @@ const TrendingNow = () => {
   }, []);
 
   return (
-    <section className="absolute top-145 left-0 z-10 w-full flex flex-col justify-center gap-4 pt-10">
+    <section className="absolute top-145 left-0 z-10 w-full flex flex-col justify-center gap-4 pt-10 pl-36">
 
       <p className="text-2xl px-2">Trending Now</p>
 
