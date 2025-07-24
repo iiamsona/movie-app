@@ -19,10 +19,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* important */
+  flex-direction: column;
   font-family: "Inter", sans-serif;
   width: 100%;
-  overflow: hidden; /* ✅ prevent scrolling */
+  overflow: hidden;
 }
 
 
