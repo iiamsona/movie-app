@@ -1,13 +1,14 @@
 import MovieDescription from "./MovieDescription.tsx";
-import SideBar from "./SideBar.tsx";
+import TrendingNow from "./TrendingNow.tsx";
 
 const FirstScreen = () => {
   return (
-    <section className="relative w-screen h-screen flex">
-      <SideBar />
+    <section className="relative w-full h-screen overflow-y-auto">
       <MovieDescription />
+      <TrendingNow />
     </section>
   );
 };
+
 
 export default FirstScreen;
