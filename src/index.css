@@ -50,3 +50,15 @@ body {
   );
   
 }
+
+.bottombar {
+  background: #040404;
+  background: linear-gradient(
+    360deg,                  /* bottom to top */
+    rgba(4, 4, 4, 1) 0%,     /* full black at bottom */
+    rgba(4, 4, 4, 0.9) 60%, /* slightly transparent */
+    rgba(4, 4, 4, 0.8) 80%,
+    rgba(4, 4, 4, 0.7) 90%,
+    rgba(4, 4, 4, 0) 100%    /* fully transparent at top */
+  );
+}
