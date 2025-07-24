@@ -22,7 +22,7 @@ const TrendingNow = () => {
       <p className="text-2xl px-2">Trending Now</p>
 
       <div className="hide-scrollbar overflow-x-auto">
-        <div className="flex gap-4 px-2 w-max">
+        <div className="flex gap-4 w-max">
           {trendingItems.map((item) => (
             <img
               key={item.Id}
