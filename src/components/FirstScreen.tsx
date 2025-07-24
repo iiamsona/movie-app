@@ -1,10 +1,11 @@
-import MovieDescription from './MovieDescription.tsx'
+import MovieDescription from "./MovieDescription.tsx";
+import SideBar from "./SideBar.tsx";
 
 const FirstScreen = () => {
-
   return (
-    <section className="relative w-screen h-screen flex flex-col items-start pl-36">
-     <MovieDescription/>
+    <section className="relative w-screen h-screen flex">
+      <SideBar />
+      <MovieDescription />
     </section>
   );
 };
