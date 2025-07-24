@@ -1,9 +1,22 @@
-import getImageURL from "../utils/image-util.js";
+import SideBarButton from './SideBarButton.tsx'
+import Search from "../assets/icons/search.png";
+import Home from "../assets/icons/home.png";
+import Video from "../assets/icons/video.png";
+import Reel from "../assets/icons/reel.png";
+import Mask from "../assets/icons/mask.png";
+import History from "../assets/icons/history.png";
 
 const SideBar = () => {
   return (
-    <section className="relative h-full w-36 flex flex-col justify-center items-start">
-      ok
+    <section className="relative h-full w-36 flex flex-col justify-center items-center">
+      <div className="flex flex-col gap-2">
+        <SideBarButton image={Search} alt='Search'/>
+        <SideBarButton image={Home} alt='Home' selected/>
+        <SideBarButton image={Video} alt='Video'/>
+        <SideBarButton image={Reel} alt='Reel'/>
+        <SideBarButton image={Mask} alt='Mask'/>
+        <SideBarButton image={History} alt='History'/>
+      </div>
     </section>
   );
 };
