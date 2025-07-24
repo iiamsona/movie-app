@@ -8,7 +8,7 @@ import Mask from "../assets/icons/mask.png";
 import History from "../assets/icons/history.png";
 
 const SideBar = () => {
-  const [hovered, setHovered] = useState(true);
+  const [hovered, setHovered] = useState(false);
   return (
     <section
       className={`fixed z-50 top-0 left-0 h-full w-36 hover:w-96 flex flex-col items-center hover:items-start hover:pl-2  sidebar_hover ${
