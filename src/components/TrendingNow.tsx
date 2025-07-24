@@ -12,8 +12,9 @@ const TrendingNow = () => {
   }, []);
 
   return (
-    <section className="relative w-full flex flex-col justify-center gap-4">
-      <p className="text-2xl mb-4 px-2">Trending Now</p>
+    <section className="absolute top-145 left-0 z-10 w-full flex flex-col justify-center gap-4 pt-10">
+
+      <p className="text-2xl px-2">Trending Now</p>
 
       <div className="hide-scrollbar overflow-x-auto">
         <div className="flex gap-4 px-2 w-max">
