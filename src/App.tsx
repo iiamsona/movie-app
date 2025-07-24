@@ -1,12 +1,11 @@
-
+import FirstScreen from './components/FirstScreen.tsx';
 
 function App() {
-
   return (
     <>
-     <p>Hello World</p>
+     <FirstScreen/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
