@@ -1,19 +1,25 @@
+import { useMemo, useState, useEffect } from "react";
 import data from "../data/data.json";
 import getImageURL from "../utils/image-util.js";
-import { useMemo } from "react";
 
 const TrendingNow = () => {
-
+  const lastClickedId = sessionStorage.getItem("selectedMovie");
   const trendingItems = useMemo(() => {
-    const sorted = [...data.TendingNow]
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-      .slice(0, 50);
-    return sorted;
-  }, []);
+    const sortedDefault = [...data.TendingNow].sort(
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
 
-  const getMovie = (item: object) => {
-    sessionStorage.clear();
-    sessionStorage.setItem("selectedMovie", JSON.stringify(item));
+    if (!lastClickedId) return sortedDefault;
+
+    // Put last clicked movie first, then the rest
+    const lastClickedMovie = sortedDefault.find((m) => m.Id === lastClickedId);
+    const others = sortedDefault.filter((m) => m.Id !== lastClickedId);
+
+    return lastClickedMovie ? [lastClickedMovie, ...others] : sortedDefault;
+  }, [lastClickedId]);
+
+  const getMovie = (id: string) => {
+    sessionStorage.setItem("selectedMovie", id);
     window.dispatchEvent(new Event("movieSelected"));
   };
 
@@ -29,7 +35,7 @@ const TrendingNow = () => {
               src={getImageURL(item.CoverImage)}
               alt={item.Title}
               className="w-40 h-60 object-cover flex-shrink-0 cursor-pointer"
-              onClick={() => getMovie(item)}
+              onClick={() => getMovie(item.Id)}
             />
           ))}
         </div>
