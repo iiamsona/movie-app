@@ -23,7 +23,7 @@ const TrendingNow = () => {
             key={item.Id}
             src={getImageURL(item.CoverImage)}
             alt={item.Title}
-            className="w-40 h-60 object-cover rounded-lg flex-shrink-0"
+            className="w-40 h-60 object-cover flex-shrink-0"
           />
           
           ))}

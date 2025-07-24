@@ -7,7 +7,7 @@ type SideBarButtonProps = {
   const SideBarButton = ({ image, alt, selected }: SideBarButtonProps) => {
     return (
         <section
-        className={`w-16 h-16 flex items-center justify-center rounded-4xl ${
+        className={`w-16 h-16 flex items-center justify-center rounded-4xl cursor-pointer ${
           selected ? 'bg-[#232a3f]' : ''
         }`}
       >

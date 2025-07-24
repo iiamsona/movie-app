@@ -3,7 +3,7 @@ import TrendingNow from "./TrendingNow.tsx";
 
 const FirstScreen = () => {
   return (
-    <section className="relative w-full h-screen overflow-y-auto">
+    <section className="relative w-full h-screen overflow-y-auto hide-scrollbar">
       <MovieDescription />
       <TrendingNow />
     </section>
