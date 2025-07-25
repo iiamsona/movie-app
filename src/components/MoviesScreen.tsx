@@ -1,14 +1,14 @@
-import MovieDescription from "./MovieDescription.tsx";
+import MainMovie from "./MainMovie.tsx";
 import TrendingNow from "./TrendingNow.tsx";
 
-const FirstScreen = () => {
+const MoviesScreen = () => {
   return (
     <section className="relative w-full h-screen overflow-y-auto hide-scrollbar">
-      <MovieDescription />
+      <MainMovie />
       <TrendingNow />
     </section>
   );
 };
 
 
-export default FirstScreen;
+export default MoviesScreen;

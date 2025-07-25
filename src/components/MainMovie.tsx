@@ -4,7 +4,7 @@ import getImageURL from "../utils/image-util.ts";
 import formatDuration from "../utils/time-util.ts";
 import { Play } from "lucide-react";
 
-const MovieDescription = () => {
+const MainMovie = () => {
   const [movie, setMovie] = useState(data.Featured);
   const [showVideo, setShowVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -105,4 +105,4 @@ const MovieDescription = () => {
   );
 };
 
-export default MovieDescription;
+export default MainMovie;

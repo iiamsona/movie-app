@@ -1,11 +1,11 @@
-import FirstScreen from "./components/FirstScreen.tsx";
+import MoviesScreen from "./components/MoviesScreen.tsx";
 import SideBar from "./components/SideBar.tsx";
 
 function App() {
   return (
     <div className="flex h-screen w-screen overflow-hidden">
       <SideBar />
-      <FirstScreen />
+      <MoviesScreen />
     </div>
   );
 }
