@@ -1,17 +1,15 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo } from "react";
 import data from "../data/data.json";
-import getImageURL from "../utils/image-util.js";
+import getImageURL from "../utils/image-util.ts";
 
 const TrendingNow = () => {
   const lastClickedId = sessionStorage.getItem("selectedMovie");
   const trendingItems = useMemo(() => {
     const sortedDefault = [...data.TendingNow].sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      (a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime()
     );
 
     if (!lastClickedId) return sortedDefault;
-
-    // Put last clicked movie first, then the rest
     const lastClickedMovie = sortedDefault.find((m) => m.Id === lastClickedId);
     const others = sortedDefault.filter((m) => m.Id !== lastClickedId);
 

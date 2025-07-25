@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import data from "../data/data.json";
-import getImageURL from "../utils/image-util.js";
-import formatDuration from "../utils/time-util.js";
+import getImageURL from "../utils/image-util.ts";
+import formatDuration from "../utils/time-util.ts";
 import { Play } from "lucide-react";
 
 const MovieDescription = () => {
@@ -66,7 +66,7 @@ const MovieDescription = () => {
         />
       ) : (
         <video
-          key={movie.Id} // Force remount on movie change
+          key={movie.Id}
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
           src={movie.VideoUrl}

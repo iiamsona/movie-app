@@ -25,46 +25,38 @@ body {
   overflow: hidden;
 }
 
-
-#root{
+#root {
   width: 100%;
 }
 
-.hide-scrollbar::-webkit-scrollbar{
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-.hide-scrollbar{
+.hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.sidebar_hover:hover{
+.sidebar_hover:hover {
   background: #040404;
   background: linear-gradient(
-    90deg, 
-    rgba(4, 4, 4, 1) 0%,      /* full black at start */
-    rgba(4, 4, 4, 0.99) 60%,   /* semi-transparent black */
-    rgba(4, 4, 4, 0.9) 80%,   /* lighter transparency */
+    90deg,
+    rgba(4, 4, 4, 1) 0%,
+    rgba(4, 4, 4, 0.99) 60%,
+    rgba(4, 4, 4, 0.9) 80%,
     rgba(4, 4, 4, 0.8) 90%,
-    rgba(4, 4, 4, 0) 100%     /* fully transparent at the end */
+    rgba(4, 4, 4, 0) 100%
   );
-  
 }
 
 .bottombar {
   background: #040404;
   background: linear-gradient(
-    360deg,                  /* bottom to top */
-    rgba(4, 4, 4, 1) 0%,     /* full black at bottom */
-    rgba(4, 4, 4, 0.9) 60%, /* slightly transparent */
+    360deg,
+    rgba(4, 4, 4, 1) 0%,
+    rgba(4, 4, 4, 0.9) 60%,
     rgba(4, 4, 4, 0.8) 80%,
     rgba(4, 4, 4, 0.7) 90%,
-    rgba(4, 4, 4, 0) 100%    /* fully transparent at top */
+    rgba(4, 4, 4, 0) 100%
   );
-}
-
-@media (max-width:640px) {
-  .sidebar_hover{
-    display:none
-  }
 }

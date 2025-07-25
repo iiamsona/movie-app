@@ -11,7 +11,7 @@ const SideBar = () => {
   const [hovered, setHovered] = useState(false);
   return (
     <section
-      className={`fixed z-50 top-0 left-0 h-full w-36 hover:w-96 flex flex-col items-center hover:items-start hover:pl-2 bg-[#040404]  sidebar_hover transition-all duration-500 ease-in-out ${
+      className={`fixed z-50 top-0 left-0 h-full hidden w-36 hover:w-96 sm:flex  flex-col items-center hover:items-start hover:pl-2 bg-[#040404]  sidebar_hover transition-all duration-500 ease-in-out ${
         hovered ? "justify-between" : "justify-center"
       }`}
       onMouseEnter={() => setHovered(true)}
