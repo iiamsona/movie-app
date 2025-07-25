@@ -62,3 +62,9 @@ body {
     rgba(4, 4, 4, 0) 100%    /* fully transparent at top */
   );
 }
+
+@media (max-width:640px) {
+  .sidebar_hover{
+    display:none
+  }
+}
