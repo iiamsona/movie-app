@@ -1,5 +1,5 @@
-import MoviesScreen from "./components/MoviesScreen.tsx";
-import SideBar from "./components/SideBar.tsx";
+import MoviesScreen from "./components/movies/MoviesScreen.tsx";
+import SideBar from "./components/sideBar/SideBar.tsx";
 
 function App() {
   return (

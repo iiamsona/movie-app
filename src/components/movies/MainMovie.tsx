@@ -1,61 +1,10 @@
-import { useEffect, useState, useRef } from "react";
-import data from "../data/data.json";
-import getImageURL from "../utils/image-util.ts";
-import formatDuration from "../utils/time-util.ts";
+import getImageURL from "../../utils/image-util.ts";
+import formatDuration from "../../utils/time-util.ts";
 import { Play } from "lucide-react";
+import useMainMovie from "../../hooks/useMainMovie";
 
 const MainMovie = () => {
-  const [movie, setMovie] = useState(data.Featured);
-  const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    const handleUpdate = () => {
-      const storedId = sessionStorage.getItem("selectedMovie");
-      if (storedId) {
-        const foundMovie = data.TendingNow.find((item) => item.Id === storedId);
-        if (foundMovie) {
-          setMovie(foundMovie);
-          setShowVideo(false);
-
-          if (timerRef.current) clearTimeout(timerRef.current);
-
-          timerRef.current = setTimeout(() => {
-            setShowVideo(true);
-          }, 2000);
-        } else {
-          setMovie(data.Featured);
-          setShowVideo(false);
-        }
-      } else {
-        setMovie(data.Featured);
-        setShowVideo(false);
-      }
-    };
-
-    window.addEventListener("movieSelected", handleUpdate);
-    handleUpdate();
-
-    return () => {
-      window.removeEventListener("movieSelected", handleUpdate);
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
-  useEffect(() => {
-    if (showVideo && videoRef.current) {
-      videoRef.current
-        .play()
-        .catch((e) => {
-          console.warn("Video play was prevented:", e);
-        });
-    }
-  }, [showVideo]);
-  useEffect(() => {
-    if (movie.VideoUrl) {
-      console.log("Playing video:", movie.VideoUrl);
-    }
-  }, [movie]);
+  const { movie, showVideo, videoRef } = useMainMovie();
 
   return (
     <section className="relative h-6/7 w-full flex flex-col justify-center items-start pl-1 sm:pl-44 overflow-hidden">
