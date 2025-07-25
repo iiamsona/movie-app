@@ -1,85 +1,92 @@
-# 🎬 Movie App — React Application
 
 ---
 
-## 🚀 Overview
+# 🎬 Movie App
 
-This is a **web-based TV application** built with **React.js** that provides a sleek and interactive interface for browsing and watching movies. The app is designed according to a provided design spec and leverages modern web technologies for a smooth user experience.
-
----
-
-## 🎯 Features
-
-### 1. Main Menu
-
-- **Location:** Left sidebar.
-- **Icons:** Search, Home, TV Shows, Movies, Genres, Watch Later.
-- **Interaction:**  
-  - On hover, the menu smoothly **expands with a floating animation** sliding from left to right.  
-  - Background overlay fades in from 0% to 80% opacity.  
-  - The expanded view reveals profile info with user icons and names, plus extra menu options at the bottom like language settings, help, and exit.
-
-### 2. Main Featured Video
-
-- **Position:** Top-left corner of the screen.
-- **Contents:**  
-  - Featured movie cover image  
-  - Category label (e.g., *Movie*)  
-  - Transparent PNG movie logo  
-  - Release year  
-  - MPA rating  
-  - Duration  
-  - Brief description  
-  - Two action buttons: **Play** and **More Info**
-
-### 3. Trending Now Section
-
-- **Data Source:** Fetches up to 50 trending videos sorted by creation date (newest first) from the JSON data.
-- **Display:**  
-  - Horizontal carousel showing 8 movie covers at a time.  
-  - Scroll or drag horizontally to reveal more movies.
-- **Interaction:**  
-  - Clicking on a movie updates the featured video section with that movie’s details.  
-  - After 2 seconds, the featured section transitions the background to play the selected movie’s video (autoplay, no controls).  
-  - The clicked movie ID is saved to `sessionStorage` to remember user preferences.
-- **Persistence:**  
-  - On page reload, movies previously clicked are **sorted to the top**, followed by the rest in the default order.
+A sleek **React**-powered TV streaming web app that lets you explore featured movies and trending videos with an intuitive sidebar menu and smooth video playback.
 
 ---
 
-## 🛠️ Technology Stack & Libraries
+## 🚀 Project Overview
 
-| Library / Tool     | Purpose                              | Version       |
-| ------------------ | ---------------------------------- | ------------- |
-| **React**          | Core UI library                    | 19.1.0        |
-| **Vite**           | Build tool & development server    | 7.0.4         |
-| **TypeScript**     | Static typing                      | ~5.8.3        |
-| **Tailwind CSS**   | Utility-first CSS framework         | 4.1.11        |
-| **Framer Motion**  | Smooth animations & transitions    | 12.23.9       |
-| **Lucide React**   | Icons                             | 0.525.0       |
-| **ESLint & Plugins** | Code linting and quality assurance | Various       |
+This app is designed to provide a TV-like browsing experience on the web. Built with React and Tailwind CSS, it features:
+
+* A dynamic main menu with icons and hover animations
+* A main featured movie block with video playback support
+* A horizontally scrollable "Trending Now" carousel
+* Persistent user preferences using session storage
 
 ---
 
-## ⚙️ Installation & Setup
+## ✨ Features
 
-1. **Clone the repository:**
-   ```bash
-   git clone <https://github.com/iiamsona/movie-app.git>
-   cd movie-app
-````
+### 🧭 Main Menu
 
-2. **Install dependencies:**
+* Vertical sidebar with icons: Search, Home, TV Shows, Movies, Genres, Watch Later
+* Expands on hover with smooth animation and 80% background opacity
+* Displays user profile info and additional options (Language, Get Help, Exit) in expanded state
 
-   ```bash
-   npm install
-   ```
+### 🎞️ Featured Movie Section
 
-3. **Start the development server:**
+* Displays latest featured movie with:
 
-   ```bash
-   npm run dev
-   ```
+  * Background cover image or playing video after selection
+  * Category badge (e.g. Movie)
+  * Transparent PNG movie logo
+  * Release year, MPA rating, duration info
+  * Short descriptive text
+  * Two primary buttons: Play & More Info
+* Clicking a trending movie updates this section with a 2-second delay before video playback starts
 
-4. **Open the app:**
-   Open your browser and navigate to `http://localhost:5173/`.
+### 📺 Trending Now Carousel
+
+* Displays up to 50 trending movies sorted by newest first
+* Shows 8 movies visible at a time with horizontal scrolling/dragging support
+* Clicking a movie updates the featured movie and saves selection in session storage
+* On reload, last selected movies appear first in the carousel
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+* Node.js (v18 or higher recommended)
+* npm or yarn installed
+
+### Installation & Running
+
+```bash
+git clone https://github.com/iiamsona/movie-app.git
+cd movie-app
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to get started!
+
+
+---
+
+## 🛠️ Technologies & Tools
+
+* **React 19** with modern hooks & TypeScript
+* **Tailwind CSS** for utility-first styling
+* **Vite** as blazing fast build tool and dev server
+* **Framer Motion** for smooth animations (optional)
+* **Lucide React** for crisp SVG icons
+* **clsx** for conditional class name management
+* ESLint + TypeScript for code quality and safety
+
+---
+
+## 📜 Available Scripts
+
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start development server             |
+| `npm run build`   | Build production-ready optimized app |
+| `npm run preview` | Preview built app locally            |
+| `npm run lint`    | Run linting checks                   |
+
+---
