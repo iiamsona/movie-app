@@ -27,8 +27,8 @@ const SideBar = () => {
         {menuItems.map(({ image, label, selected }) => (
           <SideBarButton
             key={label}
-            image={image}
-            string={label}
+            icon={image}
+            label={label}
             hovered={hovered}
             selected={selected}
           />
@@ -37,9 +37,9 @@ const SideBar = () => {
 
       {hovered && (
         <div className="w-full grid grid-rows-3 gap-1 pl-8 pb-8 text-md font-semibold tracking-widest uppercase text-[#858688]">
-          <p className="cursor-pointer">Langage</p>
-          <p className="cursor-pointer">Get help</p>
-          <p className="cursor-pointer">Exit</p>
+          <span className="cursor-pointer">Langage</span>
+          <span className="cursor-pointer">Get help</span>
+          <span className="cursor-pointer">Exit</span>
         </div>
       )}
     </section>
